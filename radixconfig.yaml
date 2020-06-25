@@ -1,0 +1,17 @@
+apiVersion: radix.equinor.com/v1
+kind: RadixApplication
+metadata:
+  name: hello-world
+spec:
+  environments:
+    - name: dev
+      build:
+        from: master
+    - name: prod
+  components:
+    - name: server
+      src: "."
+      ports:
+       - name: http
+         port: 8000
+      publicPort: http
