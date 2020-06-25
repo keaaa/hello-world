@@ -7,7 +7,9 @@ ENV CGO_ENABLED=0 \
 WORKDIR /build
 
 COPY . .
-RUN go build -o main .
+
+RUN go test ./... && \
+    go build -o main .
 
 
 FROM scratch AS runner
