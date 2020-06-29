@@ -8,6 +8,8 @@ WORKDIR /build
 
 COPY . .
 
+RUN go test ./...
+
 RUN go build -o main .
 
 
