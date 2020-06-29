@@ -9,7 +9,7 @@ import (
 func Test_hello_world_output(t *testing.T) {
 	msg := handlers.GetResponse()
 
-	if msg != "Hello world!" {
+	if msg != "Hello world!!" {
 		t.Error()
 	}
 }
