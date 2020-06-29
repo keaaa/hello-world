@@ -15,3 +15,11 @@ spec:
        - name: http
          port: 8000
       publicPort: http
+    - name: client
+      src: "client"
+      ports:
+       - name: http
+         port: 8080
+      publicPort: http
+      variables:
+        URL_SERVER: http://server:8000
