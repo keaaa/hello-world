@@ -6,7 +6,7 @@ import (
 )
 
 func GetResponse() string {
-	return "Hello world!"
+	return "Hello world!!"
 }
 
 func HelloWorld(w http.ResponseWriter, r *http.Request) {
