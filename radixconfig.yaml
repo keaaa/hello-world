@@ -11,6 +11,13 @@ spec:
   components:
     - name: server
       src: "."
+      resources:
+        requests:
+          memory: "100Mi"
+          cpu: "50m"
+        limits:
+          memory: "100Mi"
+          cpu: "1000m"
       ports:
        - name: http
          port: 8000
@@ -20,5 +27,12 @@ spec:
        - name: http
          port: 8080
       publicPort: http
+      resources:
+        requests:
+          memory: "100Mi"
+          cpu: "50m"
+        limits:
+          memory: "100Mi"
+          cpu: "1000m"
       variables:
         URL_SERVER: http://server:8000
